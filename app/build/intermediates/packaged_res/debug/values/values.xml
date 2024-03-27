@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="gold">#FFC107</color>
+    <color name="light_blue">#03A9F4</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">TaskManagerApp</string>
+    <style name="Base.Theme.TaskManagerApp" parent="Theme.Material3.DayNight.NoActionBar">
+		
+		
+		<item name="android:statusBarColor">@color/light_blue</item> 
+	</style>
+    <style name="CheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+		<item name="android:button">@drawable/checkbox_drawable</item>
+	</style>
+    <style name="Theme.TaskManagerApp" parent="Base.Theme.TaskManagerApp"/>
+    <style name="tm_background">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:adjustViewBounds">false</item>
+		<item name="android:scaleType">fitXY</item>
+	</style>
+</resources>

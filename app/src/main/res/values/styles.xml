@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="tm_background">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:adjustViewBounds">false</item>
+		<item name="android:scaleType">fitXY</item>
+	</style>
+	<style name="CheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+		<item name="android:button">@drawable/checkbox_drawable</item>
+	</style>
+
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/tmscreen1"
+	android:orientation="vertical">
+	
+	<ImageView
+		android:id="@+id/imageViewSplash"
+		android:layout_width="323dp"
+		android:layout_height="168dp"
+		android:layout_gravity="center"
+		android:clickable="false"
+		android:rotation="55"
+		app:srcCompat="@drawable/mrocket" />
+	
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fontFamily="casual"
+		android:gravity="center"
+		android:text="Task Manager App"
+		android:textColor="@color/gold"
+		android:textSize="25dp"
+		android:textStyle="bold"
+		app:layout_constraintTop_toBottomOf="@+id/imageViewSplash" />
+	
+	<TextView
+		android:id="@+id/LogInText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Log In"
+		android:textColor="@color/gold"
+		android:textSize="25dp"
+		android:textStyle="bold"/>
+	
+	<TextView
+		android:id="@+id/HiThere"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Hi there ! Nice to see you !"
+		android:textColor="@color/white"
+		android:textSize="20dp"/>
+		
+	<TextView
+		android:id="@+id/LogInEmail"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="50dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Email"
+		android:textColor="@color/gold"
+		android:textSize="20dp"
+		android:textStyle="bold"/>
+	
+	<EditText
+		android:id="@+id/editTextUsername"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:backgroundTint="@color/white"
+		android:fontFamily="casual"
+		android:hint="example@email.com"
+		android:inputType="text"
+		android:textColorHint="@color/white"
+		android:textSize="18dp" />
+	<TextView
+		android:id="@+id/SignInPassword"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Password"
+		android:textColor="@color/gold"
+		android:textSize="20dp"
+		android:textStyle="bold"/>
+		
+		<EditText
+			android:id="@+id/editTextPassword"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
+			android:backgroundTint="@color/white"
+			android:fontFamily="casual"
+			android:hint="************"
+			android:inputType="textPassword"
+			android:textColorHint="@color/white"
+			android:textSize="20dp"/>
+		
+		<Button
+			android:id="@+id/buttonLogin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="75dp"
+			android:layout_marginRight="40dp"
+			android:backgroundTint="@color/light_blue"
+			android:fontFamily="casual"
+			android:text="Log In"
+			android:textStyle="bold"/>
+	
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="50dp"
+			android:orientation="horizontal">
+		<TextView
+			android:id="@+id/textViewForgotPassword"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="40dp"
+			android:fontFamily="casual"
+			android:text="Forgot Password?"
+			android:textColor="@color/gold"
+			android:textStyle="bold"/>
+		
+		<TextView
+			android:id="@+id/textViewCreateAccount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="40dp"
+			android:fontFamily="casual"
+			android:text="Create New Account"
+			android:textColor="@color/gold"
+			android:textStyle="bold"/>
+		</LinearLayout>
+</LinearLayout>
+
