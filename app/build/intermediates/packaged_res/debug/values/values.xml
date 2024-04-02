@@ -5,6 +5,13 @@
     <color name="light_blue">#03A9F4</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">TaskManagerApp</string>
+    <string name="firebase_database_url" translatable="false">https://taskmanagerrealdatabase-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">898458656919</string>
+    <string name="google_api_key" translatable="false">AIzaSyDqXsuO5ogzp-gZHvbviIzHsttncizJ_wA</string>
+    <string name="google_app_id" translatable="false">1:898458656919:android:ec0de635430bc8808249d2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDqXsuO5ogzp-gZHvbviIzHsttncizJ_wA</string>
+    <string name="google_storage_bucket" translatable="false">taskmanagerrealdatabase.appspot.com</string>
+    <string name="project_id" translatable="false">taskmanagerrealdatabase</string>
     <style name="Base.Theme.TaskManagerApp" parent="Theme.Material3.DayNight.NoActionBar">
 		
 		

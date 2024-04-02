@@ -14,7 +14,7 @@
 		android:orientation="horizontal">
 		
 		<TextView
-			android:id="@+id/SignInText"
+			android:id="@+id/SignUpText"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="30dp"
@@ -39,13 +39,39 @@
 	
 	</LinearLayout>
 	
-	
 	<TextView
-		android:id="@+id/SignInEmail"
+		android:id="@+id/SignUpUsername"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
-		android:layout_marginTop="250dp"
+		android:layout_marginTop="200dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Username"
+		android:textColor="@color/gold"
+		android:textSize="20dp"
+		android:textStyle="bold" />
+	
+	<EditText
+		android:id="@+id/SignUpUsernameText"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:backgroundTint="@color/white"
+		android:fontFamily="casual"
+		android:hint="username"
+		android:inputType="text"
+		android:textColor="@color/white"
+		android:textColorHint="@color/white"
+		android:textSize="18dp"
+		android:textStyle="bold" />
+	
+	<TextView
+		android:id="@+id/SignUpEmail"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
 		android:layout_marginRight="40dp"
 		android:fontFamily="casual"
 		android:text="Email"
@@ -54,7 +80,7 @@
 		android:textStyle="bold" />
 	
 	<EditText
-		android:id="@+id/editTextUsername"
+		android:id="@+id/SignUpEmailText"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_marginLeft="40dp"
@@ -63,11 +89,13 @@
 		android:fontFamily="casual"
 		android:hint="example@email.com"
 		android:inputType="text"
+		android:textColor="@color/white"
 		android:textColorHint="@color/white"
-		android:textSize="18dp" />
+		android:textSize="18dp"
+		android:textStyle="bold" />
 	
 	<TextView
-		android:id="@+id/SignInPassword"
+		android:id="@+id/SignUpPassword"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
@@ -80,7 +108,7 @@
 		android:textStyle="bold" />
 	
 	<EditText
-		android:id="@+id/editTextPassword"
+		android:id="@+id/SignUpPasswordText"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_marginLeft="40dp"
@@ -89,7 +117,7 @@
 		android:fontFamily="casual"
 		android:hint="************"
 		android:inputType="textPassword"
-		android:textColor="@color/gold"
+		android:textColor="@color/white"
 		android:textColorHint="@color/white"
 		android:textSize="20dp" />
 	
@@ -107,20 +135,21 @@
 		android:textStyle="bold"/>
 		
 	<Button
-		android:id="@+id/buttonLogin"
+		android:id="@+id/signupbutton"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
-		android:layout_marginTop="55dp"
+		android:layout_marginTop="20dp"
 		android:layout_marginRight="40dp"
 		android:backgroundTint="@color/light_blue"
 		android:fontFamily="casual"
 		android:text="Continue"
+		android:textSize="18dp"
 		android:textStyle="bold" />
 	
 		
 		<TextView
-			android:id="@+id/textViewAlreadyAccount"
+			android:id="@+id/alreadyaccountclick"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"

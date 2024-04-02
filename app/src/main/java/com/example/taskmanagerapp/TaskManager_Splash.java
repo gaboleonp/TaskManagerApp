@@ -1,10 +1,10 @@
 package com.example.taskmanagerapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TaskManager_Splash extends AppCompatActivity {
 
@@ -20,6 +20,6 @@ public class TaskManager_Splash extends AppCompatActivity {
 				startActivity(intent);
 				finish();
 			}
-		}, 4000);
+		}, 2000);
 	}
 }
