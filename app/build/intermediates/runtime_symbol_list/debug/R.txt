@@ -3135,6 +3135,7 @@ int id LogInPasswordText 0x7f08000a
 int id LogInText 0x7f08000b
 int id LoginButton 0x7f08000c
 int id META 0x7f08000d
+int id ManagerWelcomeText 0x7f080210
 int id NO_DEBUG 0x7f08000e
 int id SHIFT 0x7f08000f
 int id SHOW_ALL 0x7f080010

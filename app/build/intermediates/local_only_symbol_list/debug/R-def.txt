@@ -21,6 +21,7 @@ id LogInPassword
 id LogInPasswordText
 id LogInText
 id LoginButton
+id ManagerWelcomeText
 id SignUpEmail
 id SignUpEmailText
 id SignUpPassword

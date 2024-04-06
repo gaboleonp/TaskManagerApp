@@ -3136,6 +3136,7 @@ id LogInPasswordText
 id LogInText
 id LoginButton
 id META
+id ManagerWelcomeText
 id NO_DEBUG
 id SHIFT
 id SHOW_ALL

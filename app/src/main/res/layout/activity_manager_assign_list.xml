@@ -30,7 +30,7 @@
 		app:layout_constraintTop_toBottomOf="@+id/imageViewSplash" />
 	
 	<TextView
-		android:id="@+id/LogInText"
+		android:id="@+id/ManagerWelcomeText"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"

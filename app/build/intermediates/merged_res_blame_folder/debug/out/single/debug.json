@@ -1,142 +1,150 @@
 [
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_tmscreen0.jpg.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\tmscreen0.jpg"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_checkbox_drawable.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/checkbox_drawable.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_mrocket.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\mrocket.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_tmscreen0.jpg.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/tmscreen0.jpg"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_tmscreen1.jpeg.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\tmscreen1.jpeg"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/xml_backup_rules.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_checkbox_drawable.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\checkbox_drawable.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_mrocketbw.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\mrocketbw.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-ldpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_mrocketbw.png.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/mrocketbw.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_log_in.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_log_in.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_mrocket.png.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/mrocket.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_main.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/layout/activity_main.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_task_manager_splash.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_task_manager_splash.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_user_task_list.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_user_task_list.xml"
     },
     {
         "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_log_in.xml.flat",
         "source": "com.example.taskmanagerapp-main-38:/layout/activity_log_in.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_line_drawable.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\line_drawable.xml"
     },
     {
         "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_sign_up.xml.flat",
         "source": "com.example.taskmanagerapp-main-38:/layout/activity_sign_up.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_tmrocket.png.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/tmrocket.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_tmscreen1.jpeg.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/tmscreen1.jpeg"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_user_task_list.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/layout/activity_user_task_list.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_sign_up.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable_line_drawable.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/drawable/line_drawable.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_task_manager_splash.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/layout/activity_task_manager_splash.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\layout_activity_manager_assign_list.xml.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\layout\\activity_manager_assign_list.xml"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/layout_activity_manager_assign_list.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/layout/activity_manager_assign_list.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.taskmanagerapp-pngs-31:/drawable-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable_tmrocket.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\drawable\\tmrocket.png"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.taskmanagerapp-merged_res-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.taskmanagerapp-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-merged_res-36:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\gabol\\.gradle\\daemon\\8.2\\com.example.taskmanagerapp-pngs-31:\\drawable-xxhdpi\\ic_launcher_foreground.png"
     }
 ]
