@@ -24,7 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
 	CheckBox checkBox;
 	FirebaseDatabase database;
 	DatabaseReference reference;
-	private EditText usernametxt, emailtxt, passwordtxt;
+	private EditText usernametxt, roletxt, emailtxt, passwordtxt;
 	private Button signupbtn;
 
 	@Override
@@ -47,6 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
 		ifaccountlogin.setText(spannableString1);
 
 		usernametxt = findViewById(R.id.SignUpUsernameText);
+		roletxt = findViewById(R.id.SignUpRoleText);
 		emailtxt = findViewById(R.id.SignUpEmailText);
 		passwordtxt = findViewById(R.id.SignUpPasswordText);
 		signupbtn = findViewById(R.id.signupbutton);
@@ -64,25 +65,36 @@ public class SignUpActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				database = FirebaseDatabase.getInstance();
 				reference = database.getReference("users");
-				String username = usernametxt.getText().toString().trim();
-				String email = emailtxt.getText().toString().trim();
-				String password = passwordtxt.getText().toString().trim();
+				String username = usernametxt.getText().toString().trim().toLowerCase();
+				String role = roletxt.getText().toString().trim().toLowerCase();
+				String email = emailtxt.getText().toString().trim().toLowerCase();
+				String password = passwordtxt.getText().toString().trim().toLowerCase();
 
-				if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+				if (username.isEmpty() || email.isEmpty() || password.isEmpty() || role.isEmpty() ) {
 					Toast.makeText(SignUpActivity.this, "All fields must be filled out !", Toast.LENGTH_SHORT).show();
 					return;
 				} else {
-					Model model = new Model(username, email, password);
+					Model model = new Model(username,role, email, password);
 					reference.child(username).setValue(model);
 					Toast.makeText(SignUpActivity.this, "Account Created Successfully", Toast.LENGTH_SHORT).show();
-					Intent intent = new Intent(SignUpActivity.this, Manager_AssignList_Activity.class);
-					intent.putExtra("username", username);
-					intent.putExtra("email", email);
-					intent.putExtra("password", password);
-					startActivity(intent);
+
+					if ("manager".equals(role)) {
+						Intent managerIntent = new Intent(SignUpActivity.this, Manager_AssignList_Activity.class);
+						managerIntent.putExtra("username", username);
+						managerIntent.putExtra("role", role);
+						managerIntent.putExtra("email", email);
+						managerIntent.putExtra("password", password);
+						startActivity(managerIntent);
+					} else if ("employee".equals(role)) {
+						Intent employeeIntent = new Intent(SignUpActivity.this, User_TaskList_Activity.class);
+						employeeIntent.putExtra("username", username);
+						employeeIntent.putExtra("role", role);
+						employeeIntent.putExtra("email", email);
+						employeeIntent.putExtra("password", password);
+						startActivity(employeeIntent);
+					}
+
 					finish();
-
-
 				}
 
 			}

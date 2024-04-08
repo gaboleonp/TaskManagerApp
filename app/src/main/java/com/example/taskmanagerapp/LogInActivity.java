@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LogInActivity extends AppCompatActivity {
 	// private FirebaseAuth mAuth;
 
-	private EditText emailtext, passwordtext;
+	private EditText emailtext, passwordtext, confirmpasswordtext;
 	private TextView ifsignuptext;
 	private Button loginbtn;
 
@@ -31,6 +31,7 @@ public class LogInActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_log_in);
 		emailtext = findViewById(R.id.LogInEmailText);
 		passwordtext = findViewById(R.id.LogInPasswordText);
+		confirmpasswordtext = findViewById(R.id.LogInConfirmPasswordText);
 		loginbtn = findViewById(R.id.LoginButton);
 		ifsignuptext = findViewById(R.id.CreateAccountTextView);
 
@@ -51,47 +52,61 @@ public class LogInActivity extends AppCompatActivity {
 
 	public void checkUser(){
 
-		String emailLogin = emailtext.getText().toString().trim();
-		String passwordLogin = passwordtext.getText().toString().trim();
+		String emailLogin = emailtext.getText().toString().trim().toLowerCase();
+		String passwordLogin = passwordtext.getText().toString().trim().toLowerCase();
+		String confirmpasswordLogin = confirmpasswordtext.getText().toString().trim().toLowerCase();
 
 		DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
 		Query checkUserData = reference.orderByChild("email").equalTo(emailLogin);
 		checkUserData.addListenerForSingleValueEvent(new ValueEventListener() {
 			@Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
+			public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+				if(dataSnapshot.exists()){
 					for (DataSnapshot userSnapShot : dataSnapshot.getChildren()){
 
-                    String passfromDB = userSnapShot.child("password").getValue(String.class);
+						String passfromDB = userSnapShot.child("password").getValue(String.class);
+						String rolefromDB = userSnapShot.child("role").getValue(String.class);
 
 						assert passfromDB != null;
 						if(passfromDB.equals(passwordLogin)){
-							// parsing
+
 							String usernameDB = userSnapShot.child("username").getValue(String.class);
-                            String emailDB = userSnapShot.child("email").getValue(String.class);
-                            String passwordDB = userSnapShot.child("password").getValue(String.class);
+							String emailDB = userSnapShot.child("email").getValue(String.class);
+							String passwordDB = userSnapShot.child("password").getValue(String.class);
+							String confirmpasswordDB = userSnapShot.child("confirmPassword").getValue(String.class);
 
-							//intent
-                        Intent intent = new Intent(LogInActivity.this,Manager_AssignList_Activity.class);
-						intent.putExtra("username", usernameDB);
-						intent.putExtra("email", emailDB);
-						intent.putExtra("password", passwordDB);
-						Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_SHORT).show();
-                        startActivity(intent);
-						finish();
-
-                    }else{
-						Toast.makeText(getApplicationContext(), "Wrong password", Toast.LENGTH_LONG).show();
+							if (passwordLogin.equals(confirmpasswordLogin)) {
+								if("manager".equals(rolefromDB)) {
+									Intent mintent = new Intent(LogInActivity.this, Manager_AssignList_Activity.class);
+									mintent.putExtra("username", usernameDB);
+									mintent.putExtra("email", emailDB);
+									mintent.putExtra("password", passwordDB);
+									mintent.putExtra("confirmPassword", confirmpasswordDB);
+									startActivity(mintent);
+								} else if("employee".equals(rolefromDB)) {
+									Intent eintent = new Intent(LogInActivity.this, User_TaskList_Activity.class);
+									eintent.putExtra("username", usernameDB);
+									eintent.putExtra("email", emailDB);
+									eintent.putExtra("password", passwordDB);
+									eintent.putExtra("confirmPassword", confirmpasswordDB);
+									startActivity(eintent);
+								}
+								Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+								finish();
+							} else {
+								Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_LONG).show();
+							}
+						} else {
+							Toast.makeText(getApplicationContext(), "Wrong password", Toast.LENGTH_LONG).show();
+						}
 					}
-					}
-                }else {
+				} else {
 					Toast.makeText(getApplicationContext(), "User not found", Toast.LENGTH_LONG).show();
 				}
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+			}
+			@Override
+			public void onCancelled(@NonNull DatabaseError databaseError) {
+			}
 		});
-	};
+	}
 }
