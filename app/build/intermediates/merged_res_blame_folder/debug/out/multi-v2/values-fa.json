@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-34:/values-fa/values-fa.xml",
+            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-35:/values-fa/values-fa.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gabol\\.gradle\\caches\\transforms-3\\aff902bd9441e7be9d0f7854914db262\\transformed\\browser-1.4.0\\res\\values-fa\\values-fa.xml",

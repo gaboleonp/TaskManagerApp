@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-34:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-35:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gabol\\.gradle\\caches\\transforms-3\\9f9686aa69ef96e09752468c17c9646c\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",

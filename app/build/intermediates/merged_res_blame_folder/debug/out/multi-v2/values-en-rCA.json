@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-34:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-35:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gabol\\.gradle\\caches\\transforms-3\\aff902bd9441e7be9d0f7854914db262\\transformed\\browser-1.4.0\\res\\values-en-rCA\\values-en-rCA.xml",

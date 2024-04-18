@@ -76,7 +76,6 @@ public class User_TaskList_Activity extends AppCompatActivity {
 
 			@Override
 			public void onCancelled(@NonNull DatabaseError databaseError) {
-				// Handle error
 				Log.e("User_TaskList_Activity", "DatabaseError: " + databaseError.getMessage());
 			}
 		});

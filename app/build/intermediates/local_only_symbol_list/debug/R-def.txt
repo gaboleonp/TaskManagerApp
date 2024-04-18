@@ -59,7 +59,6 @@ id taskListView
 id taskdeadlinetxt
 id taskdescriptiontxt
 id tasknametxt
-id tasksButton
 id taskuserListView
 id taskuserassignedtxt
 id textViewTasksDeadline

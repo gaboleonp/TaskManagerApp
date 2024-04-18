@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-34:/values-ca/values-ca.xml",
+            "outputFile": "com.example.taskmanagerapp-mergeDebugResources-35:/values-ca/values-ca.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gabol\\.gradle\\caches\\transforms-3\\0570ee09c4b843e5f89ff9be7be8c4cd\\transformed\\core-1.9.0\\res\\values-ca\\values-ca.xml",

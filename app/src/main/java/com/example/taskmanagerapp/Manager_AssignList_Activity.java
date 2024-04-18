@@ -25,8 +25,6 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_manager_assign_list);
 
-		titleemail = findViewById(R.id.showemailtext);
-		titleusername = findViewById(R.id.showusernametext);
 		signout = findViewById(R.id.signoutbutton);
 
 		taskusername = findViewById(R.id.taskuserassignedtxt);
@@ -37,7 +35,6 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 		btnassigntask = findViewById(R.id.assigntaskbutton);
 		btnviewtask = findViewById(R.id.viewtaskbutton);
 
-		// Initialize Firebase database reference to 'users' node
 		usersReference = FirebaseDatabase.getInstance().getReference("users");
 
 		btnassigntask.setOnClickListener(new View.OnClickListener() {
@@ -71,21 +68,17 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 		final String tasksdescription = taskdescription.getText().toString().trim();
 		final String tasksdeadline = taskdeadline.getText().toString().trim();
 
-		// Check if the provided username exists under the 'users' node
 		usersReference.child(tasksusername).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
 			@Override
 			public void onComplete(@NonNull com.google.android.gms.tasks.Task<DataSnapshot> task) {
 				if (task.isSuccessful()) {
 					DataSnapshot snapshot = task.getResult();
 					if (snapshot.exists()) {
-						// Username exists, proceed with adding the task
 						addTask(tasksusername, tasksname, tasksdescription, tasksdeadline);
 					} else {
-						// Username does not exist, show error message
 						Toast.makeText(Manager_AssignList_Activity.this, "User does not exist", Toast.LENGTH_SHORT).show();
 					}
 				} else {
-					// Error occurred while checking username existence, show error message
 					Toast.makeText(Manager_AssignList_Activity.this, "Error checking username existence", Toast.LENGTH_SHORT).show();
 				}
 			}
@@ -93,21 +86,17 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 	}
 
 	private void addTask(String tasksusername, String tasksname, String tasksdescription, String tasksdeadline) {
-		// Generate unique task ID
 		String taskId = usersReference.child(tasksusername).child("tasks").push().getKey();
 
 		Task task = new Task(tasksusername, tasksname, tasksdescription, tasksdeadline);
 
-		// Add the task under the specified user's node
 		usersReference.child(tasksusername).child("tasks").child(taskId).setValue(task)
 				.addOnCompleteListener(new OnCompleteListener<Void>() {
 					@Override
 					public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> t) {
 						if (t.isSuccessful()) {
-							// Task added successfully, show success message
 							Toast.makeText(Manager_AssignList_Activity.this, "Task assigned successfully", Toast.LENGTH_SHORT).show();
 						} else {
-							// Failed to add task, show error message
 							Toast.makeText(Manager_AssignList_Activity.this, "Failed to assign task", Toast.LENGTH_SHORT).show();
 						}
 					}
