@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class LogInActivity extends AppCompatActivity {
 	private EditText emailtext, passwordtext, confirmpasswordtext;
 	private TextView ifsignuptext;
 	private Button loginbtn;
+	private ImageView mapImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class LogInActivity extends AppCompatActivity {
 		confirmpasswordtext = findViewById(R.id.LogInConfirmPasswordText);
 		loginbtn = findViewById(R.id.LoginButton);
 		ifsignuptext = findViewById(R.id.CreateAccountTextView);
+		mapImage = findViewById(R.id.imageViewSplash);
 
 		ifsignuptext.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -48,6 +51,14 @@ public class LogInActivity extends AppCompatActivity {
 			@Override
             public void onClick(View v) {
 				checkUser();
+            }
+		});
+
+		mapImage.setOnClickListener(new View.OnClickListener() {
+			@Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogInActivity.this, location.class );
+                startActivity(intent);
             }
 		});
 	}
