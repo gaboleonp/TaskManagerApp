@@ -7,9 +7,12 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,12 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
-	TextView textView, ifaccountlogin;
+	TextView ifaccountlogin;
 	CheckBox checkBox;
 	FirebaseDatabase database;
 	DatabaseReference reference;
-	private EditText usernametxt, roletxt, emailtxt, passwordtxt;
+	private EditText usernametxt, emailtxt, passwordtxt;
 	private Button signupbtn;
+	private Spinner roleSpinner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +51,9 @@ public class SignUpActivity extends AppCompatActivity {
 		ifaccountlogin.setText(spannableString1);
 
 		usernametxt = findViewById(R.id.SignUpUsernameText);
-		roletxt = findViewById(R.id.SignUpRoleText);
 		emailtxt = findViewById(R.id.SignUpEmailText);
 		passwordtxt = findViewById(R.id.SignUpPasswordText);
+		roleSpinner = findViewById(R.id.SignUpRoleSpinner);
 		signupbtn = findViewById(R.id.signupbutton);
 
 
@@ -60,13 +64,21 @@ public class SignUpActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
+
 		signupbtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				boolean agreedToTerms = checkBox.isChecked();
+
+				if (!agreedToTerms) {
+					Toast.makeText(SignUpActivity.this, "You must agree to the terms and conditions", Toast.LENGTH_SHORT).show();
+					return;
+				}
+
 				database = FirebaseDatabase.getInstance();
 				reference = database.getReference("users");
 				String username = usernametxt.getText().toString().trim().toLowerCase();
-				String role = roletxt.getText().toString().trim().toLowerCase();
+				String role = roleSpinner.getSelectedItem().toString().trim().toLowerCase();
 				String email = emailtxt.getText().toString().trim().toLowerCase();
 				String password = passwordtxt.getText().toString().trim().toLowerCase();
 
@@ -76,28 +88,46 @@ public class SignUpActivity extends AppCompatActivity {
 				} else {
 					Model model = new Model(username,role, email, password);
 					reference.child(username).setValue(model);
+
 					Toast.makeText(SignUpActivity.this, "Account Created Successfully", Toast.LENGTH_SHORT).show();
 
+					Intent intent;
 					if ("manager".equals(role)) {
-						Intent managerIntent = new Intent(SignUpActivity.this, Manager_AssignList_Activity.class);
-						managerIntent.putExtra("username", username);
-						managerIntent.putExtra("role", role);
-						managerIntent.putExtra("email", email);
-						managerIntent.putExtra("password", password);
-						startActivity(managerIntent);
-					} else if ("employee".equals(role)) {
-						Intent employeeIntent = new Intent(SignUpActivity.this, User_TaskList_Activity.class);
-						employeeIntent.putExtra("username", username);
-						employeeIntent.putExtra("role", role);
-						employeeIntent.putExtra("email", email);
-						employeeIntent.putExtra("password", password);
-						startActivity(employeeIntent);
+						intent = new Intent(SignUpActivity.this, Manager_AssignList_Activity.class);
+					} else {
+						intent = new Intent(SignUpActivity.this, User_TaskList_Activity.class);
 					}
+					intent.putExtra("username", username);
+					intent.putExtra("role", role);
+					intent.putExtra("email", email);
+					intent.putExtra("password", password);
+					startActivity(intent);
 
 					finish();
 				}
+			}
+		});
+
+
+		roleSpinner = findViewById(R.id.SignUpRoleSpinner);
+
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+				R.array.roles, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		roleSpinner.setAdapter(adapter);
+
+		roleSpinner.setSelection(0);
+		roleSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parentView) {
 
 			}
 		});
+
 	}
 }

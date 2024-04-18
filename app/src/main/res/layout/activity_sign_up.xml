@@ -81,22 +81,18 @@
 		android:textSize="20dp"
 		android:textStyle="bold" />
 	
-	<EditText
-		android:id="@+id/SignUpRoleText"
+	<Spinner
+		android:id="@+id/SignUpRoleSpinner"
+		style="@style/CustomSpinnerDropdownStyle"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_marginLeft="40dp"
-		android:layout_marginRight="40dp"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="35dp"
+		android:layout_marginRight="35dp"
 		android:layout_marginBottom="10dp"
-		android:background="@drawable/border"
-		android:fontFamily="casual"
-		android:hint="Manager or Employee"
-		android:inputType="text"
+		android:entries="@array/roles"
 		android:padding="10dp"
-		android:textColor="@color/white"
-		android:textColorHint="@color/white"
-		android:textSize="18dp"
-		android:textStyle="bold" />
+		android:popupBackground="@drawable/custom_spinner_dropdown_background"
+		android:textColor="@color/white"/>
 	
 	
 	<TextView

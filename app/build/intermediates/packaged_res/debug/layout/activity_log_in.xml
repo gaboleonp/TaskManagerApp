@@ -76,10 +76,11 @@
 		android:layout_marginLeft="40dp"
 		android:layout_marginRight="40dp"
 		android:layout_marginBottom="10dp"
-		android:backgroundTint="@color/white"
+		android:background="@drawable/border"
 		android:fontFamily="casual"
 		android:hint="example@email.com"
 		android:inputType="text"
+		android:padding="10dp"
 		android:textColor="@color/white"
 		android:textColorHint="@color/white"
 		android:textSize="18dp"
@@ -104,21 +105,51 @@
 			android:layout_marginLeft="40dp"
 			android:layout_marginRight="40dp"
 			android:layout_marginBottom="10dp"
-			android:backgroundTint="@color/white"
+			android:background="@drawable/border"
 			android:fontFamily="casual"
 			android:hint="************"
 			android:inputType="textPassword"
+			android:padding="10dp"
 			android:textColor="@color/white"
 			android:textColorHint="@color/white"
-			android:textSize="20dp"
+			android:textSize="18dp"
 			android:textStyle="bold"/>
+	<TextView
+		android:id="@+id/LogInConfirmPassword"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Confirm your Password"
+		android:textColor="@color/gold"
+		android:textSize="20dp"
+		android:textStyle="bold"/>
+	
+	<EditText
+		android:id="@+id/LogInConfirmPasswordText"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/border"
+		android:fontFamily="casual"
+		android:hint="************"
+		android:inputType="textPassword"
+		android:padding="10dp"
+		android:textColor="@color/white"
+		android:textColorHint="@color/white"
+		android:textSize="18dp"
+		android:textStyle="bold"/>
 		
 		<Button
 			android:id="@+id/LoginButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="40dp"
-			android:layout_marginTop="75dp"
+			android:layout_marginTop="08dp"
 			android:layout_marginRight="40dp"
 			android:backgroundTint="@color/light_blue"
 			android:fontFamily="casual"
@@ -126,19 +157,7 @@
 			android:textSize="18dp"
 			android:textStyle="bold"/>
 	
-		
-<!--		<TextView-->
-<!--			android:id="@+id/textViewForgotPassword"-->
-<!--			android:layout_width="wrap_content"-->
-<!--			android:layout_height="wrap_content"-->
-<!--			android:layout_marginLeft="40dp"-->
-<!--			android:layout_marginTop="10dp"-->
-<!--			android:layout_marginRight="40dp"-->
-<!--			android:fontFamily="casual"-->
-<!--			android:text="Forgot Password?"-->
-<!--			android:textColor="@color/gold"-->
-<!--			android:textStyle="bold"/>-->
-		
+
 		<TextView
 			android:id="@+id/CreateAccountTextView"
 			android:layout_width="match_parent"

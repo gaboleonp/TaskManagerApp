@@ -10,16 +10,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class Manager_AssignList_Activity extends AppCompatActivity {
-	TextView titleemail, titleusername;
-	Button signout, deleteprofile;
+	TextView titleemail, titleusername, taskusername, taskname, taskdescription, taskdeadline;
+	Button signout, btnassigntask, btnviewtask;
+	DatabaseReference usersReference;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,32 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 		titleemail = findViewById(R.id.showemailtext);
 		titleusername = findViewById(R.id.showusernametext);
 		signout = findViewById(R.id.signoutbutton);
-		deleteprofile = findViewById(R.id.deleteprofilebutton);
-		showDataUser();
+
+		taskusername = findViewById(R.id.taskuserassignedtxt);
+		taskname = findViewById(R.id.tasknametxt);
+		taskdescription = findViewById(R.id.taskdescriptiontxt);
+		taskdeadline = findViewById(R.id.taskdeadlinetxt);
+
+		btnassigntask = findViewById(R.id.assigntaskbutton);
+		btnviewtask = findViewById(R.id.viewtaskbutton);
+
+		// Initialize Firebase database reference to 'users' node
+		usersReference = FirebaseDatabase.getInstance().getReference("users");
+
+		btnassigntask.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				InsertData();
+			}
+		});
+		btnviewtask.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Manager_AssignList_Activity.this, TaskListActivity.class));
+				finish();
+			}
+		});
+
 		signout.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -40,35 +63,54 @@ public class Manager_AssignList_Activity extends AppCompatActivity {
 				finish();
 			}
 		});
-		deleteprofile.setOnClickListener(new View.OnClickListener() {
+	}
+
+	private void InsertData() {
+		final String tasksusername = taskusername.getText().toString().trim();
+		final String tasksname = taskname.getText().toString().trim();
+		final String tasksdescription = taskdescription.getText().toString().trim();
+		final String tasksdeadline = taskdeadline.getText().toString().trim();
+
+		// Check if the provided username exists under the 'users' node
+		usersReference.child(tasksusername).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
 			@Override
-            public void onClick(View v) {
-                String usernameMain = titleusername.getText().toString().trim();
-				DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-				Query checkUserData = reference.orderByChild("username").equalTo(usernameMain);
-				checkUserData.addListenerForSingleValueEvent(new ValueEventListener() {
-					@Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-
-                           dataSnapshot.child(usernameMain).getRef().removeValue();
-							Toast.makeText(Manager_AssignList_Activity.this, "Delete profile success !", Toast.LENGTH_SHORT).show();
-							Intent intent = new Intent(Manager_AssignList_Activity.this, SignUpActivity.class);
-							startActivity(intent);
-							finish();}
-                        }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {}
-				});
-            }
+			public void onComplete(@NonNull com.google.android.gms.tasks.Task<DataSnapshot> task) {
+				if (task.isSuccessful()) {
+					DataSnapshot snapshot = task.getResult();
+					if (snapshot.exists()) {
+						// Username exists, proceed with adding the task
+						addTask(tasksusername, tasksname, tasksdescription, tasksdeadline);
+					} else {
+						// Username does not exist, show error message
+						Toast.makeText(Manager_AssignList_Activity.this, "User does not exist", Toast.LENGTH_SHORT).show();
+					}
+				} else {
+					// Error occurred while checking username existence, show error message
+					Toast.makeText(Manager_AssignList_Activity.this, "Error checking username existence", Toast.LENGTH_SHORT).show();
+				}
+			}
 		});
 	}
 
-	public void showDataUser(){
-		Intent intent = getIntent();
-		titleusername.setText(intent.getStringExtra("username"));
-		titleemail.setText("Email: "+intent.getStringExtra("email"));
+	private void addTask(String tasksusername, String tasksname, String tasksdescription, String tasksdeadline) {
+		// Generate unique task ID
+		String taskId = usersReference.child(tasksusername).child("tasks").push().getKey();
 
+		Task task = new Task(tasksusername, tasksname, tasksdescription, tasksdeadline);
+
+		// Add the task under the specified user's node
+		usersReference.child(tasksusername).child("tasks").child(taskId).setValue(task)
+				.addOnCompleteListener(new OnCompleteListener<Void>() {
+					@Override
+					public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> t) {
+						if (t.isSuccessful()) {
+							// Task added successfully, show success message
+							Toast.makeText(Manager_AssignList_Activity.this, "Task assigned successfully", Toast.LENGTH_SHORT).show();
+						} else {
+							// Failed to add task, show error message
+							Toast.makeText(Manager_AssignList_Activity.this, "Failed to assign task", Toast.LENGTH_SHORT).show();
+						}
+					}
+				});
 	}
 }

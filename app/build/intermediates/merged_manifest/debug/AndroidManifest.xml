@@ -34,6 +34,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.TaskManagerApp" >
         <activity
+            android:name="com.example.taskmanagerapp.UpdateUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.taskmanagerapp.TaskListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.taskmanagerapp.Task"
+            android:exported="false" />
+        <activity
             android:name="com.example.taskmanagerapp.Manager_AssignList_Activity"
             android:exported="false" />
         <activity

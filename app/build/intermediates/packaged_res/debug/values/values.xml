@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="roles">
+		<item>manager</item>
+		<item>employee</item>
+	</string-array>
     <color name="black">#FF000000</color>
+    <color name="border_color">#FFFFFFFF</color>
+    <color name="dropdown_background_color">#03A9F4</color>
     <color name="gold">#FFC107</color>
     <color name="light_blue">#03A9F4</color>
     <color name="white">#FFFFFFFF</color>
@@ -19,6 +25,13 @@
 	</style>
     <style name="CheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
 		<item name="android:button">@drawable/checkbox_drawable</item>
+	</style>
+    <style name="CustomSpinnerDropdownStyle" parent="Widget.AppCompat.Spinner.DropDown">
+		<item name="android:background">@drawable/custom_spinner_dropdown_background</item>
+	</style>
+    <style name="SpinnerItemStyle">
+		<item name="android:textSize">20dp</item>
+		<item name="android:textStyle">bold</item>
 	</style>
     <style name="Theme.TaskManagerApp" parent="Base.Theme.TaskManagerApp"/>
     <style name="tm_background">

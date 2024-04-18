@@ -10,5 +10,13 @@
 	<style name="CheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
 		<item name="android:button">@drawable/checkbox_drawable</item>
 	</style>
+	
+	<style name="SpinnerItemStyle">
+		<item name="android:textSize">20dp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="CustomSpinnerDropdownStyle" parent="Widget.AppCompat.Spinner.DropDown">
+		<item name="android:background">@drawable/custom_spinner_dropdown_background</item>
+	</style>
 
 </resources>

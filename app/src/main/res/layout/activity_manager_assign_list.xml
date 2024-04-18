@@ -9,25 +9,36 @@
 	android:background="@drawable/tmscreen1"
 	android:orientation="vertical">
 	
-	<ImageView
-		android:id="@+id/imageViewSplash"
-		android:layout_width="323dp"
-		android:layout_height="168dp"
-		android:layout_gravity="center"
-		android:clickable="false"
-		android:rotation="55"
-		app:srcCompat="@drawable/mrocket" />
-	
-	<TextView
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:fontFamily="casual"
-		android:gravity="center"
-		android:text="Task Manager App"
-		android:textColor="@color/gold"
-		android:textSize="25dp"
-		android:textStyle="bold"
-		app:layout_constraintTop_toBottomOf="@+id/imageViewSplash" />
+		android:orientation="horizontal">
+		
+		<TextView
+			android:id="@+id/SignUpText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"
+			android:layout_marginTop="30dp"
+			android:layout_marginRight="40dp"
+			android:fontFamily="casual"
+			android:text="Sign Up"
+			android:textColor="@color/gold"
+			android:textSize="25dp"
+			android:textStyle="bold" />
+		
+		<ImageView
+			android:id="@+id/imageViewSplash"
+			android:layout_width="150dp"
+			android:layout_height="100dp"
+			android:layout_gravity="center"
+			android:layout_marginLeft="100dp"
+			android:clickable="false"
+			android:rotation="55"
+			app:srcCompat="@drawable/mrocket" />
+	
+	
+	</LinearLayout>
 	
 	<TextView
 		android:id="@+id/ManagerWelcomeText"
@@ -68,12 +79,109 @@
 		android:textSize="25dp"
 		android:textStyle="bold"/>
 	
+	<TextView
+		android:id="@+id/textViewUsersTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:fontFamily="casual"
+		android:text="Insert Task details"
+		android:textColor="@color/gold"
+		android:textSize="22sp"
+		android:textStyle="bold"/>
+	
+	<EditText
+		android:id="@+id/taskuserassignedtxt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:background="@color/gold"
+		android:fontFamily="casual"
+		android:hint="Enter the Username: "
+		android:textColor="@color/light_blue"
+		android:textColorHint="@color/light_blue"
+		android:textSize="22dp"
+		android:textStyle="bold"/>
+	<EditText
+		android:id="@+id/tasknametxt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="3dp"
+		android:layout_marginRight="40dp"
+		android:background="@color/white"
+		android:fontFamily="casual"
+		android:hint="Enter the task name: "
+		android:textColor="@color/light_blue"
+		android:textColorHint="@color/light_blue"
+		android:textSize="22dp"
+		android:textStyle="bold"/><EditText
+		android:id="@+id/taskdescriptiontxt"
+		android:layout_width="match_parent"
+	android:layout_height="120dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="3dp"
+	android:layout_marginRight="40dp"
+		android:background="@color/white"
+		android:fontFamily="casual"
+	android:gravity="left"
+		android:hint="Enter the task description: "
+		android:inputType="textMultiLine"
+	android:shadowColor="@color/light_blue"
+	android:textColor="@color/light_blue"
+		android:textColorHint="@color/light_blue"
+		android:textSize="22dp"
+		android:textStyle="bold"/><EditText
+		android:id="@+id/taskdeadlinetxt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="3dp"
+	android:layout_marginRight="40dp"
+		android:background="@color/white"
+	android:fontFamily="casual"
+		android:hint="Enter the deadline: "
+		android:inputType="datetime"
+	android:outlineAmbientShadowColor="@color/light_blue"
+	android:textColor="@color/light_blue"
+		android:textColorHint="@color/light_blue"
+		android:textSize="22dp"
+		android:textStyle="bold"/>
+	
+	<Button
+		android:id="@+id/assigntaskbutton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="40dp"
+		android:backgroundTint="@color/light_blue"
+		android:fontFamily="casual"
+		android:text="Assign task"
+		android:textSize="18dp"
+		android:textStyle="bold" />
+	
+	<Button
+		android:id="@+id/viewtaskbutton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="40dp"
+		android:backgroundTint="@color/light_blue"
+		android:fontFamily="casual"
+		android:text="View Users"
+		android:textSize="18dp"
+		android:textStyle="bold" />
+	
 	<Button
 		android:id="@+id/signoutbutton"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
-		android:layout_marginTop="20dp"
+		android:layout_marginTop="10dp"
 		android:layout_marginRight="40dp"
 		android:backgroundTint="@color/light_blue"
 		android:fontFamily="casual"
@@ -81,19 +189,7 @@
 		android:textSize="18dp"
 		android:textStyle="bold" />
 	
-	<Button
-		android:id="@+id/deleteprofilebutton"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="40dp"
-		android:layout_marginTop="20dp"
-		android:layout_marginRight="40dp"
-		android:backgroundTint="@color/light_blue"
-		android:fontFamily="casual"
-		android:text="Delete my Profile"
-		android:textSize="18dp"
-		android:textStyle="bold" />
-		
+
 	
 </LinearLayout>
 

@@ -44,7 +44,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
-		android:layout_marginTop="200dp"
+		android:layout_marginTop="140dp"
 		android:layout_marginRight="40dp"
 		android:fontFamily="casual"
 		android:text="Username"
@@ -59,14 +59,41 @@
 		android:layout_marginLeft="40dp"
 		android:layout_marginRight="40dp"
 		android:layout_marginBottom="10dp"
-		android:backgroundTint="@color/white"
+		android:background="@drawable/border"
 		android:fontFamily="casual"
 		android:hint="username"
 		android:inputType="text"
+		android:padding="10dp"
 		android:textColor="@color/white"
 		android:textColorHint="@color/white"
 		android:textSize="18dp"
 		android:textStyle="bold" />
+	
+	<TextView
+		android:id="@+id/SignUpRole"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:fontFamily="casual"
+		android:text="Role"
+		android:textColor="@color/gold"
+		android:textSize="20dp"
+		android:textStyle="bold" />
+	
+	<Spinner
+		android:id="@+id/SignUpRoleSpinner"
+		style="@style/CustomSpinnerDropdownStyle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="35dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="10dp"
+		android:entries="@array/roles"
+		android:padding="10dp"
+		android:popupBackground="@drawable/custom_spinner_dropdown_background"
+		android:textColor="@color/white"/>
+	
 	
 	<TextView
 		android:id="@+id/SignUpEmail"
@@ -87,10 +114,11 @@
 		android:layout_marginLeft="40dp"
 		android:layout_marginRight="40dp"
 		android:layout_marginBottom="10dp"
-		android:backgroundTint="@color/white"
+		android:background="@drawable/border"
 		android:fontFamily="casual"
 		android:hint="example@email.com"
 		android:inputType="text"
+		android:padding="10dp"
 		android:textColor="@color/white"
 		android:textColorHint="@color/white"
 		android:textSize="18dp"
@@ -101,7 +129,6 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="40dp"
-		android:layout_marginTop="10dp"
 		android:layout_marginRight="40dp"
 		android:fontFamily="casual"
 		android:text="Password"
@@ -116,13 +143,14 @@
 		android:layout_marginLeft="40dp"
 		android:layout_marginRight="40dp"
 		android:layout_marginBottom="10dp"
-		android:backgroundTint="@color/white"
+		android:background="@drawable/border"
 		android:fontFamily="casual"
 		android:hint="************"
 		android:inputType="textPassword"
+		android:padding="10dp"
 		android:textColor="@color/white"
 		android:textColorHint="@color/white"
-		android:textSize="20dp" />
+		android:textSize="18dp" />
 	
 	<CheckBox
 		android:id="@+id/checkBox"
